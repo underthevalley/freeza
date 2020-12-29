@@ -24,6 +24,7 @@ class EntryTableViewCell: UITableViewCell {
     @IBOutlet private weak var commentsCountLabel: UILabel!
     @IBOutlet private weak var ageLabel: UILabel!
     @IBOutlet private weak var entryTitleLabel: UILabel!
+    @IBOutlet private weak var nsfwLabel: UILabel!
     
     override func layoutSubviews() {
         
@@ -52,8 +53,20 @@ class EntryTableViewCell: UITableViewCell {
             self.commentsCountLabel.layer.cornerRadius = self.commentsCountLabel.bounds.size.height / 2
         }
         
+        func configureSafeMode() {
+            self.nsfwLabel.layer.cornerRadius =  self.nsfwLabel.frame.size.height/3.0
+            self.nsfwLabel.layer.masksToBounds = true
+
+            if let adult = self.entry?.adult, adult {
+                self.nsfwLabel.isHidden.toggle()
+                self.enable(on: !adult)
+            }
+        }
+        
         configureThumbnailImageView()
         configureCommentsCountLabel()
+        configureSafeMode()
+
     }
     
     private func configureForEntry() {
@@ -72,6 +85,15 @@ class EntryTableViewCell: UITableViewCell {
         entry.loadThumbnail { [weak self] in
             
             self?.thumbnailButton.setImage(entry.thumbnail, for: [])
+        }
+    }
+}
+extension UITableViewCell {
+    func enable(on: Bool) {
+        self.isUserInteractionEnabled = on
+        for view in contentView.subviews {
+            view.isUserInteractionEnabled = on
+            view.alpha = on ? 1 : 0.5
         }
     }
 }

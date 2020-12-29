@@ -38,8 +38,8 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrj-32-1Xg">
-                                            <rect key="frame" x="118" y="50" width="276" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrj-32-1Xg">
+                                            <rect key="frame" x="118" y="50" width="228" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="Jej-X3-jhW"/>
                                             </constraints>
@@ -68,6 +68,17 @@
                                                 <action selector="thumbnailButtonTapped:" destination="4pU-iB-mch" eventType="touchUpInside" id="iE1-Jm-YT5"/>
                                             </connections>
                                         </button>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NSFW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bh-YD-Bgo">
+                                            <rect key="frame" x="349" y="43" width="45" height="20"/>
+                                            <color key="backgroundColor" red="1" green="0.26344342669999998" blue="0.37160601139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="45" id="XKP-nk-ZmZ"/>
+                                                <constraint firstAttribute="height" constant="20" id="zum-Dv-TaS"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="qNH-q5-Qjw" firstAttribute="centerY" secondItem="LXD-aI-wb0" secondAttribute="centerY" id="3W5-kr-BTM"/>
@@ -76,6 +87,8 @@
                                         <constraint firstItem="yrj-32-1Xg" firstAttribute="leading" secondItem="LXD-aI-wb0" secondAttribute="leading" id="FCB-za-DOg"/>
                                         <constraint firstItem="4kO-7S-4fe" firstAttribute="top" secondItem="qYg-we-90s" secondAttribute="topMargin" id="KNi-tI-pkw"/>
                                         <constraint firstAttribute="bottom" secondItem="ZK0-mz-4hc" secondAttribute="bottom" constant="11" id="ORI-w6-Hv0"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="5bh-YD-Bgo" secondAttribute="trailing" id="Qvz-X5-Q9G"/>
+                                        <constraint firstItem="5bh-YD-Bgo" firstAttribute="top" secondItem="qNH-q5-Qjw" secondAttribute="bottom" constant="10" id="UHP-4S-Jeg"/>
                                         <constraint firstItem="ZK0-mz-4hc" firstAttribute="leading" secondItem="4kO-7S-4fe" secondAttribute="leading" id="UQR-D9-6WJ"/>
                                         <constraint firstItem="4kO-7S-4fe" firstAttribute="leading" secondItem="qYg-we-90s" secondAttribute="leadingMargin" id="Xfj-aJ-TmR"/>
                                         <constraint firstItem="LXD-aI-wb0" firstAttribute="leading" secondItem="4kO-7S-4fe" secondAttribute="trailing" constant="8" id="arv-Hg-qLE"/>
@@ -91,6 +104,7 @@
                                     <outlet property="authorLabel" destination="LXD-aI-wb0" id="R89-pb-zz9"/>
                                     <outlet property="commentsCountLabel" destination="qNH-q5-Qjw" id="7W9-dc-7qU"/>
                                     <outlet property="entryTitleLabel" destination="ZK0-mz-4hc" id="7dr-ch-tUe"/>
+                                    <outlet property="nsfwLabel" destination="5bh-YD-Bgo" id="Sxo-Vj-rG0"/>
                                     <outlet property="thumbnailButton" destination="4kO-7S-4fe" id="aw7-Gy-wtP"/>
                                 </connections>
                             </tableViewCell>
@@ -107,7 +121,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSb-4T-dLj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2528" y="534"/>
+            <point key="canvasLocation" x="2526.0869565217395" y="533.70535714285711"/>
         </scene>
         <!--URL View Controller-->
         <scene sceneID="IJ4-nv-52n">
