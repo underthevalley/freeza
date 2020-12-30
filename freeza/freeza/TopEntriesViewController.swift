@@ -10,13 +10,19 @@ class TopEntriesViewController: UITableViewController {
     let tableFooterView = UIView()
     let moreButton = UIButton(type: .system)
     var urlToDisplay: URL?
-
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         self.tableView.delegate = self
         self.configureViews()
         self.loadEntries()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        //TODO: FIX THIS TO A OBSERVABLE ON SWITCH TOGGLE
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -140,7 +146,6 @@ extension TopEntriesViewController { // UITableViewDataSource
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let entryTableViewCell = tableView.dequeueReusableCell(withIdentifier: EntryTableViewCell.cellId, for: indexPath as IndexPath) as! EntryTableViewCell
-        
         entryTableViewCell.entry = self.viewModel.entries[indexPath.row]
         entryTableViewCell.delegate = self
         
@@ -148,10 +153,15 @@ extension TopEntriesViewController { // UITableViewDataSource
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentCell = tableView.cellForRow(at: indexPath) as! EntryTableViewCell
         let entry = self.viewModel.entries[indexPath.row]
         
-        self.urlToDisplay = entry.url
-        self.performSegue(withIdentifier: TopEntriesViewController.showImageSegueIdentifier, sender: self)
+        if let adult = entry.adult, adult, AppData.enableSafeMode {
+            currentCell.shake()
+        } else {
+            self.urlToDisplay = entry.url
+            self.performSegue(withIdentifier: TopEntriesViewController.showImageSegueIdentifier, sender: self)
+        }
     }
 }
 
@@ -162,4 +172,5 @@ extension TopEntriesViewController: EntryTableViewCellDelegate {
         self.urlToDisplay = url
         self.performSegue(withIdentifier: TopEntriesViewController.showImageSegueIdentifier, sender: self)
     }
+
 }

@@ -1,4 +1,5 @@
 import UIKit
+import QuartzCore
 
 protocol EntryTableViewCellDelegate {
     
@@ -56,17 +57,15 @@ class EntryTableViewCell: UITableViewCell {
         func configureSafeMode() {
             self.nsfwLabel.layer.cornerRadius =  self.nsfwLabel.frame.size.height/3.0
             self.nsfwLabel.layer.masksToBounds = true
-
-            if let adult = self.entry?.adult, adult {
-                self.nsfwLabel.isHidden.toggle()
-                self.enable(on: !adult)
-            }
+            
+            guard let adult = self.entry?.adult else { return }
+            self.nsfwLabel.isHidden = !adult
+            self.enable(on: !(adult && AppData.enableSafeMode))
         }
         
         configureThumbnailImageView()
         configureCommentsCountLabel()
         configureSafeMode()
-
     }
     
     private func configureForEntry() {
@@ -85,15 +84,6 @@ class EntryTableViewCell: UITableViewCell {
         entry.loadThumbnail { [weak self] in
             
             self?.thumbnailButton.setImage(entry.thumbnail, for: [])
-        }
-    }
-}
-extension UITableViewCell {
-    func enable(on: Bool) {
-        self.isUserInteractionEnabled = on
-        for view in contentView.subviews {
-            view.isUserInteractionEnabled = on
-            view.alpha = on ? 1 : 0.5
         }
     }
 }
