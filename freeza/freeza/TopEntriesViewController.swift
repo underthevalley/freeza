@@ -14,7 +14,7 @@ class TopEntriesViewController: UITableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        self.tableView.delegate = self
         self.configureViews()
         self.loadEntries()
     }
@@ -145,6 +145,12 @@ extension TopEntriesViewController { // UITableViewDataSource
         entryTableViewCell.delegate = self
         
         return entryTableViewCell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let entry = self.viewModel.entries[indexPath.row]
+        self.urlToDisplay = entry.url
+        self.performSegue(withIdentifier: TopEntriesViewController.showImageSegueIdentifier, sender: self)
     }
 }
 
