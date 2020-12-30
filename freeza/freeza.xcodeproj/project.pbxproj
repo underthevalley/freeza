@@ -24,12 +24,17 @@
 		31CAC14E1D0B412600E553AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31CAC14D1D0B412600E553AC /* Assets.xcassets */; };
 		31CAC1511D0B412600E553AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31CAC14F1D0B412600E553AC /* LaunchScreen.storyboard */; };
 		31E7F2A91D0CFAFC00C7CA70 /* URLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E7F2A81D0CFAFC00C7CA70 /* URLViewController.swift */; };
+		822EA7BE259CF443009E3F4C /* DBEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EA7BC259CF443009E3F4C /* DBEntry+CoreDataClass.swift */; };
+		822EA7C5259CF51E009E3F4C /* FavoriteEntriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EA7C4259CF51E009E3F4C /* FavoriteEntriesViewModel.swift */; };
+		822EA7D5259D1E76009E3F4C /* DBEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EA7D4259D1E76009E3F4C /* DBEntry+CoreDataProperties.swift */; };
 		828F2DDE259BC3E700285914 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2DDD259BC3E700285914 /* SettingsTableViewController.swift */; };
 		828F2DE3259BCE7800285914 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2DE2259BCE7800285914 /* UITableViewCell+Extension.swift */; };
 		828F2DE9259BE17C00285914 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2DE8259BE17C00285914 /* AppData.swift */; };
 		828F2DED259BE32500285914 /* ToggleSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2DEC259BE32500285914 /* ToggleSettingTableViewCell.swift */; };
 		828F2DF5259BF8F200285914 /* PropertyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2DF4259BF8F200285914 /* PropertyStorage.swift */; };
 		828F2E02259CE23B00285914 /* FavoriteEntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2E01259CE23B00285914 /* FavoriteEntriesTableViewController.swift */; };
+		828F2E07259CE61600285914 /* freeza.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 828F2E05259CE61600285914 /* freeza.xcdatamodeld */; };
+		828F2E12259CE82F00285914 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2E11259CE82F00285914 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,12 +69,17 @@
 		31CAC1571D0B412600E553AC /* freezaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = freezaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31CAC15D1D0B412600E553AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31E7F2A81D0CFAFC00C7CA70 /* URLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLViewController.swift; sourceTree = "<group>"; };
+		822EA7BC259CF443009E3F4C /* DBEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DBEntry+CoreDataClass.swift"; path = "../DBEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		822EA7C4259CF51E009E3F4C /* FavoriteEntriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEntriesViewModel.swift; sourceTree = "<group>"; };
+		822EA7D4259D1E76009E3F4C /* DBEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		828F2DDD259BC3E700285914 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		828F2DE2259BCE7800285914 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		828F2DE8259BE17C00285914 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		828F2DEC259BE32500285914 /* ToggleSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSettingTableViewCell.swift; sourceTree = "<group>"; };
 		828F2DF4259BF8F200285914 /* PropertyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyStorage.swift; sourceTree = "<group>"; };
 		828F2E01259CE23B00285914 /* FavoriteEntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEntriesTableViewController.swift; sourceTree = "<group>"; };
+		828F2E06259CE61600285914 /* freeza.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = freeza.xcdatamodel; sourceTree = "<group>"; };
+		828F2E11259CE82F00285914 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +127,7 @@
 				31AA46E41D0B8DA9006C42BA /* EntryViewModel.swift */,
 				31AA46E81D0B9618006C42BA /* NSDate+AgeFormatter.swift */,
 				31AA46E21D0B885C006C42BA /* TopEntriesViewModel.swift */,
+				822EA7C4259CF51E009E3F4C /* FavoriteEntriesViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -154,6 +165,7 @@
 				31CAC1461D0B412600E553AC /* AppDelegate.swift */,
 				31CAC14D1D0B412600E553AC /* Assets.xcassets */,
 				31CAC1521D0B412600E553AC /* Info.plist */,
+				828F2E05259CE61600285914 /* freeza.xcdatamodeld */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -188,6 +200,7 @@
 		31CAC1451D0B412600E553AC /* freeza */ = {
 			isa = PBXGroup;
 			children = (
+				828F2E10259CE7AB00285914 /* Data */,
 				828F2DE1259BCE6A00285914 /* Extensions */,
 				31AA46D61D0B4183006C42BA /* Connectivity */,
 				31AA46FC1D0C5480006C42BA /* Storyboards */,
@@ -225,6 +238,16 @@
 				828F2DF4259BF8F200285914 /* PropertyStorage.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		828F2E10259CE7AB00285914 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				822EA7BC259CF443009E3F4C /* DBEntry+CoreDataClass.swift */,
+				822EA7D4259D1E76009E3F4C /* DBEntry+CoreDataProperties.swift */,
+				828F2E11259CE82F00285914 /* CoreDataStack.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,13 +359,18 @@
 				31AA46DA1D0B4249006C42BA /* EntryModel.swift in Sources */,
 				828F2E02259CE23B00285914 /* FavoriteEntriesTableViewController.swift in Sources */,
 				828F2DDE259BC3E700285914 /* SettingsTableViewController.swift in Sources */,
+				822EA7C5259CF51E009E3F4C /* FavoriteEntriesViewModel.swift in Sources */,
 				31AA46E51D0B8DA9006C42BA /* EntryViewModel.swift in Sources */,
+				828F2E07259CE61600285914 /* freeza.xcdatamodeld in Sources */,
 				31CAC1471D0B412600E553AC /* AppDelegate.swift in Sources */,
+				822EA7BE259CF443009E3F4C /* DBEntry+CoreDataClass.swift in Sources */,
 				31AA46E91D0B9618006C42BA /* NSDate+AgeFormatter.swift in Sources */,
 				828F2DE9259BE17C00285914 /* AppData.swift in Sources */,
 				828F2DE3259BCE7800285914 /* UITableViewCell+Extension.swift in Sources */,
 				31E7F2A91D0CFAFC00C7CA70 /* URLViewController.swift in Sources */,
+				828F2E12259CE82F00285914 /* CoreDataStack.swift in Sources */,
 				31AA46FE1D0C54A5006C42BA /* EntryTableViewCell.swift in Sources */,
+				822EA7D5259D1E76009E3F4C /* DBEntry+CoreDataProperties.swift in Sources */,
 				31AA46F91D0C526D006C42BA /* TopEntriesViewController.swift in Sources */,
 				828F2DF5259BF8F200285914 /* PropertyStorage.swift in Sources */,
 				31AA46D81D0B419B006C42BA /* RedditClient.swift in Sources */,
@@ -435,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -482,7 +510,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -573,6 +601,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		828F2E05259CE61600285914 /* freeza.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				828F2E06259CE61600285914 /* freeza.xcdatamodel */,
+			);
+			currentVersion = 828F2E06259CE61600285914 /* freeza.xcdatamodel */;
+			path = freeza.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 31CAC13B1D0B412600E553AC /* Project object */;
 }

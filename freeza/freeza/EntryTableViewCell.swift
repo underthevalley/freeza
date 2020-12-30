@@ -4,6 +4,7 @@ import QuartzCore
 protocol EntryTableViewCellDelegate {
     
     func presentImage(withURL url: URL)
+    func updateFavorites()
 }
 
 class EntryTableViewCell: UITableViewCell {
@@ -42,8 +43,14 @@ class EntryTableViewCell: UITableViewCell {
         }
     }
     @IBAction func favoriteButtonTapped(_ sender: AnyObject) {
-        // TODO: ADD LOGIC TO SAVE TO FAV
         self.favoriteButton.isSelected = !self.favoriteButton.isSelected
+        if self.favoriteButton.isSelected {
+            entry?.saveEntryToDB()
+        } else {
+            entry?.deleteEntryToDB(){
+                self.delegate?.updateFavorites()
+            }
+        }
     }
     private func configureViews() {
         
@@ -52,7 +59,10 @@ class EntryTableViewCell: UITableViewCell {
             self.thumbnailButton.layer.borderColor = UIColor.black.cgColor
             self.thumbnailButton.layer.borderWidth = 1
         }
-        
+        func configureFavoriteButton() {
+            guard let isFavorite = self.entry?.isFavorite else { return }
+            self.favoriteButton.isSelected = isFavorite
+        }
         func configureCommentsCountLabel() {
             
             self.commentsCountLabel.layer.cornerRadius = self.commentsCountLabel.bounds.size.height / 2
@@ -68,6 +78,7 @@ class EntryTableViewCell: UITableViewCell {
         }
         
         configureThumbnailImageView()
+        configureFavoriteButton()
         configureCommentsCountLabel()
         configureSafeMode()
     }

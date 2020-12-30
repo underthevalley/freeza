@@ -31,7 +31,9 @@ class EntryViewModel {
     private let creation: Date?
     private let thumbnailURL: URL?
     private var thumbnailFetched = false
-
+    
+    private var model: EntryModel?
+    
     init(withModel model: EntryModel) {
         
         func markAsMissingRequiredField() {
@@ -39,7 +41,7 @@ class EntryViewModel {
             self.hasError = true
             self.errorMessage = "Missing required field"
         }
-
+        self.model = model
         self.title = model.title ?? "Untitled"
         self.author = model.author ?? "Anonymous"
         self.thumbnailURL = model.thumbnailURL
@@ -85,5 +87,20 @@ class EntryViewModel {
         }
             
         downloadThumbnailTask.resume()
+    }
+    
+    func saveEntryToDB() {
+        let context = CoreDataStack.shared.persistentContainer.viewContext
+        guard let model = self.model else { return }
+        DBEntry.save(model, into: context)
+    }
+    
+    func deleteEntryToDB(withCompletion completion: @escaping () -> ()) {
+        let context = CoreDataStack.shared.persistentContainer.viewContext
+        guard let model = self.model else { return }
+        DBEntry.delete(model, from: context)
+        DispatchQueue.main.async {
+            completion()
+        }
     }
 }

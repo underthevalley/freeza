@@ -168,7 +168,9 @@
                             <constraint firstItem="JKD-gb-plb" firstAttribute="top" secondItem="X2P-7D-cVs" secondAttribute="bottom" id="dtM-Oz-UaP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mIV-SH-8Cf"/>
+                    <navigationItem key="navigationItem" id="mIV-SH-8Cf">
+                        <barButtonItem key="rightBarButtonItem" image="heart" catalog="system" id="Ail-Jb-hk1"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="X2P-7D-cVs" id="6v7-mj-GkU"/>
                     </connections>
@@ -285,7 +287,7 @@
         <!--Favorites-->
         <scene sceneID="93F-pp-5b7">
             <objects>
-                <tableViewController id="UDo-FI-vX5" sceneMemberID="viewController">
+                <tableViewController id="UDo-FI-vX5" customClass="FavoriteEntriesTableViewController" customModule="freeza" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YVq-IS-0TN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -406,10 +408,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Favorites" id="1qv-Vl-CJB"/>
+                    <connections>
+                        <segue destination="aCN-S2-Zc5" kind="show" identifier="showImageSegue" id="FuO-rF-UIi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5o-Qf-BWR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3436" y="1262"/>
+            <point key="canvasLocation" x="3436" y="1235"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Oou-Hm-DfH">
@@ -450,9 +455,13 @@
             <point key="canvasLocation" x="2568" y="1262"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FuO-rF-UIi"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="alert" width="34" height="34"/>
         <image name="gear" width="24" height="24"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart" width="24" height="24"/>
         <image name="heart-full" width="24" height="24"/>
         <image name="star" width="24" height="24"/>

@@ -172,5 +172,7 @@ extension TopEntriesViewController: EntryTableViewCellDelegate {
         self.urlToDisplay = url
         self.performSegue(withIdentifier: TopEntriesViewController.showImageSegueIdentifier, sender: self)
     }
-
+    func updateFavorites() {
+        //no action
+    }
 }

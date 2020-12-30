@@ -40,4 +40,15 @@ struct EntryModel {
         self.url = urlFromDictionary(withAttributeName: "url")
         self.isAdult = dictionary["over_18"] as? Bool
     }
+    
+    init(withDB entry: DBEntry) {
+        self.title = entry.title
+        self.author = entry.author
+        self.creation = entry.creation
+        self.thumbnailURL = URL(string: entry.thumbnailURL!)
+        self.commentsCount = Int("\(entry.commentsCount)")
+        self.url = URL(string: entry.url!)
+        self.isAdult = entry.isAdult
+    }
+    
 }
