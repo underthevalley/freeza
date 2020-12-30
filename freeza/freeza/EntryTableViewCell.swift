@@ -1,5 +1,6 @@
 import UIKit
 import QuartzCore
+import Firebase
 
 protocol EntryTableViewCellDelegate {
     
@@ -45,6 +46,7 @@ class EntryTableViewCell: UITableViewCell {
     @IBAction func favoriteButtonTapped(_ sender: AnyObject) {
         self.favoriteButton.isSelected = !self.favoriteButton.isSelected
         if self.favoriteButton.isSelected {
+            Analytics.logEvent("add_to_favorite", parameters:[:])
             entry?.saveEntryToDB()
         } else {
             entry?.deleteEntryToDB(){

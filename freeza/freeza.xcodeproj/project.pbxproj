@@ -36,6 +36,8 @@
 		828F2E02259CE23B00285914 /* FavoriteEntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2E01259CE23B00285914 /* FavoriteEntriesTableViewController.swift */; };
 		828F2E07259CE61600285914 /* freeza.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 828F2E05259CE61600285914 /* freeza.xcdatamodeld */; };
 		828F2E12259CE82F00285914 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2E11259CE82F00285914 /* CoreDataStack.swift */; };
+		82F978DE259D49B500C08F28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82F978DD259D49B500C08F28 /* GoogleService-Info.plist */; };
+		82F978DF259D49B500C08F28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82F978DD259D49B500C08F28 /* GoogleService-Info.plist */; };
 		F2507569E244CC42BDEAFC9A /* Pods_freeza.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A9AF9875D8A5F52A02DA5C /* Pods_freeza.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +88,7 @@
 		828F2E01259CE23B00285914 /* FavoriteEntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEntriesTableViewController.swift; sourceTree = "<group>"; };
 		828F2E06259CE61600285914 /* freeza.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = freeza.xcdatamodel; sourceTree = "<group>"; };
 		828F2E11259CE82F00285914 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		82F978DD259D49B500C08F28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8B00CA44869A798C0D0B83E9 /* Pods-freezaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freezaTests.debug.xcconfig"; path = "Target Support Files/Pods-freezaTests/Pods-freezaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7A9AF9875D8A5F52A02DA5C /* Pods_freeza.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_freeza.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -173,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				31CAC1461D0B412600E553AC /* AppDelegate.swift */,
+				82F978DD259D49B500C08F28 /* GoogleService-Info.plist */,
 				31CAC14D1D0B412600E553AC /* Assets.xcassets */,
 				31CAC1521D0B412600E553AC /* Info.plist */,
 				828F2E05259CE61600285914 /* freeza.xcdatamodeld */,
@@ -270,7 +274,6 @@
 				8B00CA44869A798C0D0B83E9 /* Pods-freezaTests.debug.xcconfig */,
 				42778FFE5D1AD14987B1F1BB /* Pods-freezaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31CAC1511D0B412600E553AC /* LaunchScreen.storyboard in Resources */,
+				82F978DE259D49B500C08F28 /* GoogleService-Info.plist in Resources */,
 				31CAC14E1D0B412600E553AC /* Assets.xcassets in Resources */,
 				31CAC14C1D0B412600E553AC /* Main.storyboard in Resources */,
 			);
@@ -379,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82F978DF259D49B500C08F28 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

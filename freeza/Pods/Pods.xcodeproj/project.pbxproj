@@ -2835,19 +2835,6 @@
 			};
 			name = Release;
 		};
-		6141DC42F5DEBE15E117E5649E781D5C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36F17462F2CAF057FE08B9A4A305C433 /* Firebase.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		664F301BD8AC25DE2D873D68101DC059 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E554F26019985108FBD0101C89D9C35C /* FirebaseCore.debug.xcconfig */;
@@ -2955,13 +2942,14 @@
 			};
 			name = Release;
 		};
-		7E33BB391B6D563E99E70D93D42BA063 /* Release */ = {
+		7E81E4920028C62FF6103CACB7B7518A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 50B448E5013117A85AB7C567415A81F6 /* Firebase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3328,6 +3316,20 @@
 			};
 			name = Release;
 		};
+		EF8DF1DE104589D23979EBAEE60D429E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36F17462F2CAF057FE08B9A4A305C433 /* Firebase.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		F8A00D5895286D0DFD19EEACCC12C5C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0CC0D61E05CAE745A541A365C7164FC5 /* GoogleUtilities.release.xcconfig */;
@@ -3500,8 +3502,8 @@
 		D5F445878D2BF274AA19BE3720E017FD /* Build configuration list for PBXAggregateTarget "Firebase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6141DC42F5DEBE15E117E5649E781D5C /* Debug */,
-				7E33BB391B6D563E99E70D93D42BA063 /* Release */,
+				EF8DF1DE104589D23979EBAEE60D429E /* Debug */,
+				7E81E4920028C62FF6103CACB7B7518A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

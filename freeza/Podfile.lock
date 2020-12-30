@@ -1,6 +1,6 @@
 PODS:
-  - Firebase/Analytics (7.3.0):
-    - Firebase/Core
+  - Firebase (7.3.0):
+    - Firebase/Core (= 7.3.0)
   - Firebase/Core (7.3.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 7.3.0)
@@ -64,7 +64,7 @@ PODS:
   - PromisesObjC (1.2.12)
 
 DEPENDENCIES:
-  - Firebase/Analytics
+  - Firebase
 
 SPEC REPOS:
   trunk:
@@ -91,6 +91,6 @@ SPEC CHECKSUMS:
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: 55ffa4abbb9a43ba7ddf17586c08a00acbcc887f
+PODFILE CHECKSUM: d32178cff4ae335ee8008aa03ffedb8829599290
 
 COCOAPODS: 1.9.1
