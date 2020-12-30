@@ -1,0 +1,6 @@
+framework module Pods_freezaTests {
+  umbrella header "Pods-freezaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

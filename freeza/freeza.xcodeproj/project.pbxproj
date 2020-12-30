@@ -24,6 +24,7 @@
 		31CAC14E1D0B412600E553AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31CAC14D1D0B412600E553AC /* Assets.xcassets */; };
 		31CAC1511D0B412600E553AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31CAC14F1D0B412600E553AC /* LaunchScreen.storyboard */; };
 		31E7F2A91D0CFAFC00C7CA70 /* URLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E7F2A81D0CFAFC00C7CA70 /* URLViewController.swift */; };
+		60F6ED7F6C17873E00B5D81E /* Pods_freezaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17DCBC6D67FE955B0279EA69 /* Pods_freezaTests.framework */; };
 		822EA7BE259CF443009E3F4C /* DBEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EA7BC259CF443009E3F4C /* DBEntry+CoreDataClass.swift */; };
 		822EA7C5259CF51E009E3F4C /* FavoriteEntriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EA7C4259CF51E009E3F4C /* FavoriteEntriesViewModel.swift */; };
 		822EA7D5259D1E76009E3F4C /* DBEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EA7D4259D1E76009E3F4C /* DBEntry+CoreDataProperties.swift */; };
@@ -35,6 +36,7 @@
 		828F2E02259CE23B00285914 /* FavoriteEntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2E01259CE23B00285914 /* FavoriteEntriesTableViewController.swift */; };
 		828F2E07259CE61600285914 /* freeza.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 828F2E05259CE61600285914 /* freeza.xcdatamodeld */; };
 		828F2E12259CE82F00285914 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2E11259CE82F00285914 /* CoreDataStack.swift */; };
+		F2507569E244CC42BDEAFC9A /* Pods_freeza.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A9AF9875D8A5F52A02DA5C /* Pods_freeza.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17DCBC6D67FE955B0279EA69 /* Pods_freezaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_freezaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		183C142CCB0D35B9AECEDD04 /* Pods-freeza.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freeza.release.xcconfig"; path = "Target Support Files/Pods-freeza/Pods-freeza.release.xcconfig"; sourceTree = "<group>"; };
 		31AA46D71D0B419B006C42BA /* RedditClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditClient.swift; sourceTree = "<group>"; };
 		31AA46D91D0B4249006C42BA /* EntryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryModel.swift; sourceTree = "<group>"; };
 		31AA46DE1D0B43A0006C42BA /* RedditEntryModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditEntryModelTest.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 		31CAC1571D0B412600E553AC /* freezaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = freezaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31CAC15D1D0B412600E553AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31E7F2A81D0CFAFC00C7CA70 /* URLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLViewController.swift; sourceTree = "<group>"; };
+		419D1027F22B4671B692F6DD /* Pods-freeza.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freeza.debug.xcconfig"; path = "Target Support Files/Pods-freeza/Pods-freeza.debug.xcconfig"; sourceTree = "<group>"; };
+		42778FFE5D1AD14987B1F1BB /* Pods-freezaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freezaTests.release.xcconfig"; path = "Target Support Files/Pods-freezaTests/Pods-freezaTests.release.xcconfig"; sourceTree = "<group>"; };
 		822EA7BC259CF443009E3F4C /* DBEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DBEntry+CoreDataClass.swift"; path = "../DBEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		822EA7C4259CF51E009E3F4C /* FavoriteEntriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEntriesViewModel.swift; sourceTree = "<group>"; };
 		822EA7D4259D1E76009E3F4C /* DBEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -80,6 +86,8 @@
 		828F2E01259CE23B00285914 /* FavoriteEntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEntriesTableViewController.swift; sourceTree = "<group>"; };
 		828F2E06259CE61600285914 /* freeza.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = freeza.xcdatamodel; sourceTree = "<group>"; };
 		828F2E11259CE82F00285914 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		8B00CA44869A798C0D0B83E9 /* Pods-freezaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freezaTests.debug.xcconfig"; path = "Target Support Files/Pods-freezaTests/Pods-freezaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B7A9AF9875D8A5F52A02DA5C /* Pods_freeza.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_freeza.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2507569E244CC42BDEAFC9A /* Pods_freeza.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60F6ED7F6C17873E00B5D81E /* Pods_freezaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +195,8 @@
 				31CAC1451D0B412600E553AC /* freeza */,
 				31CAC15A1D0B412600E553AC /* freezaTests */,
 				31CAC1441D0B412600E553AC /* Products */,
+				92E1BDCB6568F9E6BDC579FF /* Pods */,
+				973046C4DAFDD4FF1D535758 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,6 +262,27 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		92E1BDCB6568F9E6BDC579FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				419D1027F22B4671B692F6DD /* Pods-freeza.debug.xcconfig */,
+				183C142CCB0D35B9AECEDD04 /* Pods-freeza.release.xcconfig */,
+				8B00CA44869A798C0D0B83E9 /* Pods-freezaTests.debug.xcconfig */,
+				42778FFE5D1AD14987B1F1BB /* Pods-freezaTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		973046C4DAFDD4FF1D535758 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7A9AF9875D8A5F52A02DA5C /* Pods_freeza.framework */,
+				17DCBC6D67FE955B0279EA69 /* Pods_freezaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -257,9 +290,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31CAC1601D0B412600E553AC /* Build configuration list for PBXNativeTarget "freeza" */;
 			buildPhases = (
+				52081558176811FF40C0C3F6 /* [CP] Check Pods Manifest.lock */,
 				31CAC13F1D0B412600E553AC /* Sources */,
 				31CAC1401D0B412600E553AC /* Frameworks */,
 				31CAC1411D0B412600E553AC /* Resources */,
+				98F369BA94D5D8EFBBAFFCDE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -274,6 +309,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31CAC1631D0B412600E553AC /* Build configuration list for PBXNativeTarget "freezaTests" */;
 			buildPhases = (
+				7B2506C969CA09CA4D5C18D1 /* [CP] Check Pods Manifest.lock */,
 				31CAC1531D0B412600E553AC /* Sources */,
 				31CAC1541D0B412600E553AC /* Frameworks */,
 				31CAC1551D0B412600E553AC /* Resources */,
@@ -347,6 +383,83 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52081558176811FF40C0C3F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-freeza-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B2506C969CA09CA4D5C18D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-freezaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98F369BA94D5D8EFBBAFFCDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-freeza/Pods-freeza-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreDiagnostics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-freeza/Pods-freeza-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		31CAC13F1D0B412600E553AC /* Sources */ = {
@@ -520,6 +633,7 @@
 		};
 		31CAC1611D0B412600E553AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 419D1027F22B4671B692F6DD /* Pods-freeza.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = freeza/Info.plist;
@@ -533,6 +647,7 @@
 		};
 		31CAC1621D0B412600E553AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 183C142CCB0D35B9AECEDD04 /* Pods-freeza.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = freeza/Info.plist;
@@ -546,6 +661,7 @@
 		};
 		31CAC1641D0B412600E553AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B00CA44869A798C0D0B83E9 /* Pods-freezaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = freezaTests/Info.plist;
@@ -559,6 +675,7 @@
 		};
 		31CAC1651D0B412600E553AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42778FFE5D1AD14987B1F1BB /* Pods-freezaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = freezaTests/Info.plist;
