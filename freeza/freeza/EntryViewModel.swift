@@ -25,7 +25,8 @@ class EntryViewModel {
     var thumbnail: UIImage
     let commentsCount: String
     let url: URL?
-    let adult: Bool?
+    let isAdult: Bool?
+    var isFavorite: Bool = false
     
     private let creation: Date?
     private let thumbnailURL: URL?
@@ -46,7 +47,7 @@ class EntryViewModel {
         self.commentsCount = " \(model.commentsCount ?? 0) " // Leave space for the rounded corner. I know, not cool, but does the trick.
         self.creation = model.creation
         self.url = model.url
-        self.adult = model.adult
+        self.isAdult = model.isAdult
 
         if model.title == nil ||
             model.author == nil ||

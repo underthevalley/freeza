@@ -26,6 +26,7 @@ class EntryTableViewCell: UITableViewCell {
     @IBOutlet private weak var ageLabel: UILabel!
     @IBOutlet private weak var entryTitleLabel: UILabel!
     @IBOutlet private weak var nsfwLabel: UILabel!
+    @IBOutlet private weak var favoriteButton: UIButton!
     
     override func layoutSubviews() {
         
@@ -40,7 +41,10 @@ class EntryTableViewCell: UITableViewCell {
             self.delegate?.presentImage(withURL: url)
         }
     }
-    
+    @IBAction func favoriteButtonTapped(_ sender: AnyObject) {
+        // TODO: ADD LOGIC TO SAVE TO FAV
+        self.favoriteButton.isSelected = !self.favoriteButton.isSelected
+    }
     private func configureViews() {
         
         func configureThumbnailImageView() {
@@ -58,9 +62,9 @@ class EntryTableViewCell: UITableViewCell {
             self.nsfwLabel.layer.cornerRadius =  self.nsfwLabel.frame.size.height/3.0
             self.nsfwLabel.layer.masksToBounds = true
             
-            guard let adult = self.entry?.adult else { return }
-            self.nsfwLabel.isHidden = !adult
-            self.enable(on: !(adult && AppData.enableSafeMode))
+            guard let isAdult = self.entry?.isAdult else { return }
+            self.nsfwLabel.isHidden = !isAdult
+            self.enable(on: !(isAdult && AppData.enableSafeMode))
         }
         
         configureThumbnailImageView()

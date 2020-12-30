@@ -29,6 +29,7 @@
 		828F2DE9259BE17C00285914 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2DE8259BE17C00285914 /* AppData.swift */; };
 		828F2DED259BE32500285914 /* ToggleSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2DEC259BE32500285914 /* ToggleSettingTableViewCell.swift */; };
 		828F2DF5259BF8F200285914 /* PropertyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2DF4259BF8F200285914 /* PropertyStorage.swift */; };
+		828F2E02259CE23B00285914 /* FavoriteEntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2E01259CE23B00285914 /* FavoriteEntriesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		828F2DE8259BE17C00285914 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		828F2DEC259BE32500285914 /* ToggleSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSettingTableViewCell.swift; sourceTree = "<group>"; };
 		828F2DF4259BF8F200285914 /* PropertyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyStorage.swift; sourceTree = "<group>"; };
+		828F2E01259CE23B00285914 /* FavoriteEntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEntriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				31AA46F81D0C526D006C42BA /* TopEntriesViewController.swift */,
 				31E7F2A81D0CFAFC00C7CA70 /* URLViewController.swift */,
 				828F2DDD259BC3E700285914 /* SettingsTableViewController.swift */,
+				828F2E01259CE23B00285914 /* FavoriteEntriesTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				31AA46E71D0B8F23006C42BA /* Client.swift in Sources */,
 				828F2DED259BE32500285914 /* ToggleSettingTableViewCell.swift in Sources */,
 				31AA46DA1D0B4249006C42BA /* EntryModel.swift in Sources */,
+				828F2E02259CE23B00285914 /* FavoriteEntriesTableViewController.swift in Sources */,
 				828F2DDE259BC3E700285914 /* SettingsTableViewController.swift in Sources */,
 				31AA46E51D0B8DA9006C42BA /* EntryViewModel.swift in Sources */,
 				31CAC1471D0B412600E553AC /* AppDelegate.swift in Sources */,

@@ -22,7 +22,7 @@ class TopEntriesViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
-        //TODO: FIX THIS TO A OBSERVABLE ON SWITCH TOGGLE
+        //TO DO: FIX THIS TO A OBSERVABLE ON SWITCH TOGGLE
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -156,7 +156,7 @@ extension TopEntriesViewController { // UITableViewDataSource
         let currentCell = tableView.cellForRow(at: indexPath) as! EntryTableViewCell
         let entry = self.viewModel.entries[indexPath.row]
         
-        if let adult = entry.adult, adult, AppData.enableSafeMode {
+        if let adult = entry.isAdult, adult, AppData.enableSafeMode {
             currentCell.shake()
         } else {
             self.urlToDisplay = entry.url
