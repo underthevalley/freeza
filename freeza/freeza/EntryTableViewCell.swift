@@ -1,9 +1,10 @@
 import UIKit
 import QuartzCore
+import Firebase
 
 protocol EntryTableViewCellDelegate {
-    
-    func presentImage(withURL url: URL)
+    func presentImage(withEntry: EntryViewModel)
+    func updateFavorites()
 }
 
 class EntryTableViewCell: UITableViewCell {
@@ -26,21 +27,29 @@ class EntryTableViewCell: UITableViewCell {
     @IBOutlet private weak var ageLabel: UILabel!
     @IBOutlet private weak var entryTitleLabel: UILabel!
     @IBOutlet private weak var nsfwLabel: UILabel!
+    @IBOutlet private weak var favoriteButton: UIButton!
     
     override func layoutSubviews() {
         
         super.layoutSubviews()
         self.configureViews()
     }
-    
     @IBAction func thumbnailButtonTapped(_ sender: AnyObject) {
-        
-        if let url = self.entry?.url {
-            
-            self.delegate?.presentImage(withURL: url)
+        if let entry = self.entry {
+            self.delegate?.presentImage(withEntry: entry)
         }
     }
-    
+    @IBAction func favoriteButtonTapped(_ sender: AnyObject) {
+        self.favoriteButton.isSelected = !self.favoriteButton.isSelected
+        if self.favoriteButton.isSelected {
+            Analytics.logEvent("add_to_favorite", parameters:[:])
+            entry?.saveEntryToDB()
+        } else {
+            entry?.deleteEntryToDB(){
+                self.delegate?.updateFavorites()
+            }
+        }
+    }
     private func configureViews() {
         
         func configureThumbnailImageView() {
@@ -48,7 +57,10 @@ class EntryTableViewCell: UITableViewCell {
             self.thumbnailButton.layer.borderColor = UIColor.black.cgColor
             self.thumbnailButton.layer.borderWidth = 1
         }
-        
+        func configureFavoriteButton() {
+            guard let isFavorite = self.entry?.isFavorite else { return }
+            self.favoriteButton.isSelected = isFavorite
+        }
         func configureCommentsCountLabel() {
             
             self.commentsCountLabel.layer.cornerRadius = self.commentsCountLabel.bounds.size.height / 2
@@ -58,12 +70,13 @@ class EntryTableViewCell: UITableViewCell {
             self.nsfwLabel.layer.cornerRadius =  self.nsfwLabel.frame.size.height/3.0
             self.nsfwLabel.layer.masksToBounds = true
             
-            guard let adult = self.entry?.adult else { return }
-            self.nsfwLabel.isHidden = !adult
-            self.enable(on: !(adult && AppData.enableSafeMode))
+            guard let isAdult = self.entry?.isAdult else { return }
+            self.nsfwLabel.isHidden = !isAdult
+            self.enable(on: !(isAdult && AppData.enableSafeMode))
         }
         
         configureThumbnailImageView()
+        configureFavoriteButton()
         configureCommentsCountLabel()
         configureSafeMode()
     }

@@ -8,8 +8,8 @@ struct EntryModel {
     let thumbnailURL: URL?
     let commentsCount: Int?
     let url: URL?
-    let adult: Bool? //maps to "over_18" in json
-    
+    let isAdult: Bool? //maps to "over_18" in json
+
     init(withDictionary dictionary: [String: AnyObject]) {
         
         func dateFromDictionary(withAttributeName attribute: String) -> Date? {
@@ -38,6 +38,17 @@ struct EntryModel {
         self.thumbnailURL = urlFromDictionary(withAttributeName: "thumbnail")
         self.commentsCount = dictionary["num_comments"] as? Int
         self.url = urlFromDictionary(withAttributeName: "url")
-        self.adult = dictionary["over_18"] as? Bool
+        self.isAdult = dictionary["over_18"] as? Bool
     }
+    
+    init(withDB entry: DBEntry) {
+        self.title = entry.title
+        self.author = entry.author
+        self.creation = entry.creation
+        self.thumbnailURL = URL(string: entry.thumbnailURL!)
+        self.commentsCount = Int("\(entry.commentsCount)")
+        self.url = URL(string: entry.url!)
+        self.isAdult = entry.isAdult
+    }
+    
 }

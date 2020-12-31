@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>53166138796-hkbipbskkvharh045fc19jt4o69ooikb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.53166138796-hkbipbskkvharh045fc19jt4o69ooikb</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDfARD4SWxNGpOOaLagJJzkYZCQ6LVYT8w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>53166138796</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.zerously.freeza</string>
+	<key>PROJECT_ID</key>
+	<string>freeza-2840a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>freeza-2840a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:53166138796:ios:3de86b6208b6f17a64c609</string>
+</dict>
+</plist>

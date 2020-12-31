@@ -1,0 +1,6 @@
+framework module Pods_freeza {
+  umbrella header "Pods-freeza-umbrella.h"
+
+  export *
+  module * { export * }
+}

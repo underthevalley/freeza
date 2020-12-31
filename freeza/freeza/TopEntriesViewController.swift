@@ -9,7 +9,7 @@ class TopEntriesViewController: UITableViewController {
     let errorLabel = UILabel()
     let tableFooterView = UIView()
     let moreButton = UIButton(type: .system)
-    var urlToDisplay: URL?
+    var entry: EntryViewModel?
     
     override func viewDidLoad() {
         
@@ -22,7 +22,7 @@ class TopEntriesViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
-        //TODO: FIX THIS TO A OBSERVABLE ON SWITCH TOGGLE
+        //TO DO: FIX THIS TO A OBSERVABLE ON SWITCH TOGGLE
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -41,8 +41,8 @@ class TopEntriesViewController: UITableViewController {
         if segue.identifier == TopEntriesViewController.showImageSegueIdentifier {
             
             if let urlViewController = segue.destination as? URLViewController {
-                
-                urlViewController.url = self.urlToDisplay
+            
+                urlViewController.entryViewModel = entry
             }
         }
     }
@@ -156,21 +156,21 @@ extension TopEntriesViewController { // UITableViewDataSource
         let currentCell = tableView.cellForRow(at: indexPath) as! EntryTableViewCell
         let entry = self.viewModel.entries[indexPath.row]
         
-        if let adult = entry.adult, adult, AppData.enableSafeMode {
+        if let adult = entry.isAdult, adult, AppData.enableSafeMode {
             currentCell.shake()
         } else {
-            self.urlToDisplay = entry.url
+            self.entry = entry
             self.performSegue(withIdentifier: TopEntriesViewController.showImageSegueIdentifier, sender: self)
         }
     }
 }
 
 extension TopEntriesViewController: EntryTableViewCellDelegate {
- 
-    func presentImage(withURL url: URL) {
-        
-        self.urlToDisplay = url
+    func presentImage(withEntry: EntryViewModel) {
+        self.entry = withEntry
         self.performSegue(withIdentifier: TopEntriesViewController.showImageSegueIdentifier, sender: self)
     }
-
+    func updateFavorites() {
+        //no action
+    }
 }

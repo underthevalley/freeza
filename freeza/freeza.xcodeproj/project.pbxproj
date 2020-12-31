@@ -24,11 +24,20 @@
 		31CAC14E1D0B412600E553AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31CAC14D1D0B412600E553AC /* Assets.xcassets */; };
 		31CAC1511D0B412600E553AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31CAC14F1D0B412600E553AC /* LaunchScreen.storyboard */; };
 		31E7F2A91D0CFAFC00C7CA70 /* URLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E7F2A81D0CFAFC00C7CA70 /* URLViewController.swift */; };
+		60F6ED7F6C17873E00B5D81E /* Pods_freezaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17DCBC6D67FE955B0279EA69 /* Pods_freezaTests.framework */; };
+		822EA7BE259CF443009E3F4C /* DBEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EA7BC259CF443009E3F4C /* DBEntry+CoreDataClass.swift */; };
+		822EA7C5259CF51E009E3F4C /* FavoriteEntriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EA7C4259CF51E009E3F4C /* FavoriteEntriesViewModel.swift */; };
+		822EA7D5259D1E76009E3F4C /* DBEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822EA7D4259D1E76009E3F4C /* DBEntry+CoreDataProperties.swift */; };
+		824A8785259D4A740012B961 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 824A8784259D4A740012B961 /* GoogleService-Info.plist */; };
 		828F2DDE259BC3E700285914 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2DDD259BC3E700285914 /* SettingsTableViewController.swift */; };
 		828F2DE3259BCE7800285914 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2DE2259BCE7800285914 /* UITableViewCell+Extension.swift */; };
 		828F2DE9259BE17C00285914 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2DE8259BE17C00285914 /* AppData.swift */; };
 		828F2DED259BE32500285914 /* ToggleSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2DEC259BE32500285914 /* ToggleSettingTableViewCell.swift */; };
 		828F2DF5259BF8F200285914 /* PropertyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2DF4259BF8F200285914 /* PropertyStorage.swift */; };
+		828F2E02259CE23B00285914 /* FavoriteEntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2E01259CE23B00285914 /* FavoriteEntriesTableViewController.swift */; };
+		828F2E07259CE61600285914 /* freeza.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 828F2E05259CE61600285914 /* freeza.xcdatamodeld */; };
+		828F2E12259CE82F00285914 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F2E11259CE82F00285914 /* CoreDataStack.swift */; };
+		F2507569E244CC42BDEAFC9A /* Pods_freeza.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A9AF9875D8A5F52A02DA5C /* Pods_freeza.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17DCBC6D67FE955B0279EA69 /* Pods_freezaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_freezaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		183C142CCB0D35B9AECEDD04 /* Pods-freeza.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freeza.release.xcconfig"; path = "Target Support Files/Pods-freeza/Pods-freeza.release.xcconfig"; sourceTree = "<group>"; };
 		31AA46D71D0B419B006C42BA /* RedditClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditClient.swift; sourceTree = "<group>"; };
 		31AA46D91D0B4249006C42BA /* EntryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryModel.swift; sourceTree = "<group>"; };
 		31AA46DE1D0B43A0006C42BA /* RedditEntryModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditEntryModelTest.swift; sourceTree = "<group>"; };
@@ -63,11 +74,22 @@
 		31CAC1571D0B412600E553AC /* freezaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = freezaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31CAC15D1D0B412600E553AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31E7F2A81D0CFAFC00C7CA70 /* URLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLViewController.swift; sourceTree = "<group>"; };
+		419D1027F22B4671B692F6DD /* Pods-freeza.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freeza.debug.xcconfig"; path = "Target Support Files/Pods-freeza/Pods-freeza.debug.xcconfig"; sourceTree = "<group>"; };
+		42778FFE5D1AD14987B1F1BB /* Pods-freezaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freezaTests.release.xcconfig"; path = "Target Support Files/Pods-freezaTests/Pods-freezaTests.release.xcconfig"; sourceTree = "<group>"; };
+		822EA7BC259CF443009E3F4C /* DBEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DBEntry+CoreDataClass.swift"; path = "../DBEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		822EA7C4259CF51E009E3F4C /* FavoriteEntriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEntriesViewModel.swift; sourceTree = "<group>"; };
+		822EA7D4259D1E76009E3F4C /* DBEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		824A8784259D4A740012B961 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		828F2DDD259BC3E700285914 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		828F2DE2259BCE7800285914 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		828F2DE8259BE17C00285914 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		828F2DEC259BE32500285914 /* ToggleSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSettingTableViewCell.swift; sourceTree = "<group>"; };
 		828F2DF4259BF8F200285914 /* PropertyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyStorage.swift; sourceTree = "<group>"; };
+		828F2E01259CE23B00285914 /* FavoriteEntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEntriesTableViewController.swift; sourceTree = "<group>"; };
+		828F2E06259CE61600285914 /* freeza.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = freeza.xcdatamodel; sourceTree = "<group>"; };
+		828F2E11259CE82F00285914 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		8B00CA44869A798C0D0B83E9 /* Pods-freezaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freezaTests.debug.xcconfig"; path = "Target Support Files/Pods-freezaTests/Pods-freezaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B7A9AF9875D8A5F52A02DA5C /* Pods_freeza.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_freeza.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2507569E244CC42BDEAFC9A /* Pods_freeza.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60F6ED7F6C17873E00B5D81E /* Pods_freezaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +128,7 @@
 				31AA46F81D0C526D006C42BA /* TopEntriesViewController.swift */,
 				31E7F2A81D0CFAFC00C7CA70 /* URLViewController.swift */,
 				828F2DDD259BC3E700285914 /* SettingsTableViewController.swift */,
+				828F2E01259CE23B00285914 /* FavoriteEntriesTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -114,6 +139,7 @@
 				31AA46E41D0B8DA9006C42BA /* EntryViewModel.swift */,
 				31AA46E81D0B9618006C42BA /* NSDate+AgeFormatter.swift */,
 				31AA46E21D0B885C006C42BA /* TopEntriesViewModel.swift */,
+				822EA7C4259CF51E009E3F4C /* FavoriteEntriesViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -149,8 +175,10 @@
 			isa = PBXGroup;
 			children = (
 				31CAC1461D0B412600E553AC /* AppDelegate.swift */,
+				824A8784259D4A740012B961 /* GoogleService-Info.plist */,
 				31CAC14D1D0B412600E553AC /* Assets.xcassets */,
 				31CAC1521D0B412600E553AC /* Info.plist */,
+				828F2E05259CE61600285914 /* freeza.xcdatamodeld */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -170,6 +198,8 @@
 				31CAC1451D0B412600E553AC /* freeza */,
 				31CAC15A1D0B412600E553AC /* freezaTests */,
 				31CAC1441D0B412600E553AC /* Products */,
+				92E1BDCB6568F9E6BDC579FF /* Pods */,
+				973046C4DAFDD4FF1D535758 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,6 +215,7 @@
 		31CAC1451D0B412600E553AC /* freeza */ = {
 			isa = PBXGroup;
 			children = (
+				828F2E10259CE7AB00285914 /* Data */,
 				828F2DE1259BCE6A00285914 /* Extensions */,
 				31AA46D61D0B4183006C42BA /* Connectivity */,
 				31AA46FC1D0C5480006C42BA /* Storyboards */,
@@ -224,6 +255,36 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		828F2E10259CE7AB00285914 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				822EA7BC259CF443009E3F4C /* DBEntry+CoreDataClass.swift */,
+				822EA7D4259D1E76009E3F4C /* DBEntry+CoreDataProperties.swift */,
+				828F2E11259CE82F00285914 /* CoreDataStack.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		92E1BDCB6568F9E6BDC579FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				419D1027F22B4671B692F6DD /* Pods-freeza.debug.xcconfig */,
+				183C142CCB0D35B9AECEDD04 /* Pods-freeza.release.xcconfig */,
+				8B00CA44869A798C0D0B83E9 /* Pods-freezaTests.debug.xcconfig */,
+				42778FFE5D1AD14987B1F1BB /* Pods-freezaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		973046C4DAFDD4FF1D535758 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7A9AF9875D8A5F52A02DA5C /* Pods_freeza.framework */,
+				17DCBC6D67FE955B0279EA69 /* Pods_freezaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -231,9 +292,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31CAC1601D0B412600E553AC /* Build configuration list for PBXNativeTarget "freeza" */;
 			buildPhases = (
+				52081558176811FF40C0C3F6 /* [CP] Check Pods Manifest.lock */,
 				31CAC13F1D0B412600E553AC /* Sources */,
 				31CAC1401D0B412600E553AC /* Frameworks */,
 				31CAC1411D0B412600E553AC /* Resources */,
+				98F369BA94D5D8EFBBAFFCDE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,6 +311,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31CAC1631D0B412600E553AC /* Build configuration list for PBXNativeTarget "freezaTests" */;
 			buildPhases = (
+				7B2506C969CA09CA4D5C18D1 /* [CP] Check Pods Manifest.lock */,
 				31CAC1531D0B412600E553AC /* Sources */,
 				31CAC1541D0B412600E553AC /* Frameworks */,
 				31CAC1551D0B412600E553AC /* Resources */,
@@ -308,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31CAC1511D0B412600E553AC /* LaunchScreen.storyboard in Resources */,
+				824A8785259D4A740012B961 /* GoogleService-Info.plist in Resources */,
 				31CAC14E1D0B412600E553AC /* Assets.xcassets in Resources */,
 				31CAC14C1D0B412600E553AC /* Main.storyboard in Resources */,
 			);
@@ -322,6 +387,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		52081558176811FF40C0C3F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-freeza-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B2506C969CA09CA4D5C18D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-freezaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98F369BA94D5D8EFBBAFFCDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-freeza/Pods-freeza-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreDiagnostics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-freeza/Pods-freeza-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		31CAC13F1D0B412600E553AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -331,14 +473,20 @@
 				31AA46E71D0B8F23006C42BA /* Client.swift in Sources */,
 				828F2DED259BE32500285914 /* ToggleSettingTableViewCell.swift in Sources */,
 				31AA46DA1D0B4249006C42BA /* EntryModel.swift in Sources */,
+				828F2E02259CE23B00285914 /* FavoriteEntriesTableViewController.swift in Sources */,
 				828F2DDE259BC3E700285914 /* SettingsTableViewController.swift in Sources */,
+				822EA7C5259CF51E009E3F4C /* FavoriteEntriesViewModel.swift in Sources */,
 				31AA46E51D0B8DA9006C42BA /* EntryViewModel.swift in Sources */,
+				828F2E07259CE61600285914 /* freeza.xcdatamodeld in Sources */,
 				31CAC1471D0B412600E553AC /* AppDelegate.swift in Sources */,
+				822EA7BE259CF443009E3F4C /* DBEntry+CoreDataClass.swift in Sources */,
 				31AA46E91D0B9618006C42BA /* NSDate+AgeFormatter.swift in Sources */,
 				828F2DE9259BE17C00285914 /* AppData.swift in Sources */,
 				828F2DE3259BCE7800285914 /* UITableViewCell+Extension.swift in Sources */,
 				31E7F2A91D0CFAFC00C7CA70 /* URLViewController.swift in Sources */,
+				828F2E12259CE82F00285914 /* CoreDataStack.swift in Sources */,
 				31AA46FE1D0C54A5006C42BA /* EntryTableViewCell.swift in Sources */,
+				822EA7D5259D1E76009E3F4C /* DBEntry+CoreDataProperties.swift in Sources */,
 				31AA46F91D0C526D006C42BA /* TopEntriesViewController.swift in Sources */,
 				828F2DF5259BF8F200285914 /* PropertyStorage.swift in Sources */,
 				31AA46D81D0B419B006C42BA /* RedditClient.swift in Sources */,
@@ -431,7 +579,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -478,7 +626,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -488,6 +636,7 @@
 		};
 		31CAC1611D0B412600E553AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 419D1027F22B4671B692F6DD /* Pods-freeza.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = freeza/Info.plist;
@@ -501,6 +650,7 @@
 		};
 		31CAC1621D0B412600E553AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 183C142CCB0D35B9AECEDD04 /* Pods-freeza.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = freeza/Info.plist;
@@ -514,6 +664,7 @@
 		};
 		31CAC1641D0B412600E553AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B00CA44869A798C0D0B83E9 /* Pods-freezaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = freezaTests/Info.plist;
@@ -527,6 +678,7 @@
 		};
 		31CAC1651D0B412600E553AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42778FFE5D1AD14987B1F1BB /* Pods-freezaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = freezaTests/Info.plist;
@@ -569,6 +721,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		828F2E05259CE61600285914 /* freeza.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				828F2E06259CE61600285914 /* freeza.xcdatamodel */,
+			);
+			currentVersion = 828F2E06259CE61600285914 /* freeza.xcdatamodel */;
+			path = freeza.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 31CAC13B1D0B412600E553AC /* Project object */;
 }

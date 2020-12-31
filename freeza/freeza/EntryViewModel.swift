@@ -25,12 +25,15 @@ class EntryViewModel {
     var thumbnail: UIImage
     let commentsCount: String
     let url: URL?
-    let adult: Bool?
+    let isAdult: Bool?
+    var isFavorite: Bool = false
     
     private let creation: Date?
     private let thumbnailURL: URL?
     private var thumbnailFetched = false
-
+    
+    private var model: EntryModel?
+    
     init(withModel model: EntryModel) {
         
         func markAsMissingRequiredField() {
@@ -38,7 +41,7 @@ class EntryViewModel {
             self.hasError = true
             self.errorMessage = "Missing required field"
         }
-
+        self.model = model
         self.title = model.title ?? "Untitled"
         self.author = model.author ?? "Anonymous"
         self.thumbnailURL = model.thumbnailURL
@@ -46,7 +49,7 @@ class EntryViewModel {
         self.commentsCount = " \(model.commentsCount ?? 0) " // Leave space for the rounded corner. I know, not cool, but does the trick.
         self.creation = model.creation
         self.url = model.url
-        self.adult = model.adult
+        self.isAdult = model.isAdult
 
         if model.title == nil ||
             model.author == nil ||
@@ -84,5 +87,20 @@ class EntryViewModel {
         }
             
         downloadThumbnailTask.resume()
+    }
+    
+    func saveEntryToDB() {
+        let context = CoreDataStack.shared.persistentContainer.viewContext
+        guard let model = self.model else { return }
+        DBEntry.save(model, into: context)
+    }
+    
+    func deleteEntryToDB(withCompletion completion: @escaping () -> ()) {
+        let context = CoreDataStack.shared.persistentContainer.viewContext
+        guard let model = self.model else { return }
+        DBEntry.delete(model, from: context)
+        DispatchQueue.main.async {
+            completion()
+        }
     }
 }
