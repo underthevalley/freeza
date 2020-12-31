@@ -1,4 +1,5 @@
 import UIKit
+import QuartzCore
 
 protocol EntryTableViewCellDelegate {
     
@@ -24,6 +25,7 @@ class EntryTableViewCell: UITableViewCell {
     @IBOutlet private weak var commentsCountLabel: UILabel!
     @IBOutlet private weak var ageLabel: UILabel!
     @IBOutlet private weak var entryTitleLabel: UILabel!
+    @IBOutlet private weak var nsfwLabel: UILabel!
     
     override func layoutSubviews() {
         
@@ -52,8 +54,18 @@ class EntryTableViewCell: UITableViewCell {
             self.commentsCountLabel.layer.cornerRadius = self.commentsCountLabel.bounds.size.height / 2
         }
         
+        func configureSafeMode() {
+            self.nsfwLabel.layer.cornerRadius =  self.nsfwLabel.frame.size.height/3.0
+            self.nsfwLabel.layer.masksToBounds = true
+            
+            guard let adult = self.entry?.adult else { return }
+            self.nsfwLabel.isHidden = !adult
+            self.enable(on: !(adult && AppData.enableSafeMode))
+        }
+        
         configureThumbnailImageView()
         configureCommentsCountLabel()
+        configureSafeMode()
     }
     
     private func configureForEntry() {
