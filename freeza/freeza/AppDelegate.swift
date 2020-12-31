@@ -48,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func saveContext () {
             let context = CoreDataStack.shared.persistentContainer.viewContext
+            context.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
             if context.hasChanges {
                 do {
                     try context.save()
