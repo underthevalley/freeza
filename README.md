@@ -56,3 +56,18 @@ Some resources
 Reddit API : http://www.reddit.com/dev/api
 Apigee :https://apigee.com/console/reddit
 ```
+Features added by Natalia Sibaja:
+
+- User can now save their Favorite articles tapping either on the article heart button or inside each detail screen. 
+- Quickly access Favorites them via the new Tabbar at the bottom of the screen.
+- Safe Mode added for non PG-13 content, now user can identify NSFW content at a glance with the new NSFW icon.
+- Enable/disable Safe Mode in the new Settings screen (one tap away in the Tabbar).
+- Improved list selection now you can just tap any row and see the article detail screen.
+- Recognize older articles at a glance with updated copy for article timestamp.
+
+Suggested improvements:
+- Adding Codable/Encodable Protocol support for entities
+- Map Existing entites to CoreData models
+- Use Combine for reactive programming for async call response handling and events
+- Improve loading for images
+- Update deprecated UIWebView to WKWebView
