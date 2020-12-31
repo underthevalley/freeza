@@ -15,7 +15,7 @@ class FavoriteEntriesTableViewController: UITableViewController {
     let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     let errorLabel = UILabel()
     let tableFooterView = UIView()
-    var urlToDisplay: URL?
+    var entry: EntryViewModel?
     
     override func viewDidLoad() {
         
@@ -47,7 +47,7 @@ class FavoriteEntriesTableViewController: UITableViewController {
             
             if let urlViewController = segue.destination as? URLViewController {
                 
-                urlViewController.url = self.urlToDisplay
+                urlViewController.entryViewModel = entry
             }
         }
     }
@@ -149,17 +149,15 @@ extension FavoriteEntriesTableViewController { // UITableViewDataSource
         if let adult = entry.isAdult, adult, AppData.enableSafeMode {
             currentCell.shake()
         } else {
-            self.urlToDisplay = entry.url
+            self.entry = entry
             self.performSegue(withIdentifier: TopEntriesViewController.showImageSegueIdentifier, sender: self)
         }
     }
 }
 
 extension FavoriteEntriesTableViewController: EntryTableViewCellDelegate {
- 
-    func presentImage(withURL url: URL) {
-        
-        self.urlToDisplay = url
+    func presentImage(withEntry: EntryViewModel) {
+        self.entry = withEntry
         self.performSegue(withIdentifier: TopEntriesViewController.showImageSegueIdentifier, sender: self)
     }
     func updateFavorites() {

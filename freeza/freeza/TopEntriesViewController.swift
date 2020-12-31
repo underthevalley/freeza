@@ -9,7 +9,7 @@ class TopEntriesViewController: UITableViewController {
     let errorLabel = UILabel()
     let tableFooterView = UIView()
     let moreButton = UIButton(type: .system)
-    var urlToDisplay: URL?
+    var entry: EntryViewModel?
     
     override func viewDidLoad() {
         
@@ -41,8 +41,8 @@ class TopEntriesViewController: UITableViewController {
         if segue.identifier == TopEntriesViewController.showImageSegueIdentifier {
             
             if let urlViewController = segue.destination as? URLViewController {
-                
-                urlViewController.url = self.urlToDisplay
+            
+                urlViewController.entryViewModel = entry
             }
         }
     }
@@ -159,17 +159,15 @@ extension TopEntriesViewController { // UITableViewDataSource
         if let adult = entry.isAdult, adult, AppData.enableSafeMode {
             currentCell.shake()
         } else {
-            self.urlToDisplay = entry.url
+            self.entry = entry
             self.performSegue(withIdentifier: TopEntriesViewController.showImageSegueIdentifier, sender: self)
         }
     }
 }
 
 extension TopEntriesViewController: EntryTableViewCellDelegate {
- 
-    func presentImage(withURL url: URL) {
-        
-        self.urlToDisplay = url
+    func presentImage(withEntry: EntryViewModel) {
+        self.entry = withEntry
         self.performSegue(withIdentifier: TopEntriesViewController.showImageSegueIdentifier, sender: self)
     }
     func updateFavorites() {

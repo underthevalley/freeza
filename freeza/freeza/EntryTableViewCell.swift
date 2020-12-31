@@ -3,8 +3,7 @@ import QuartzCore
 import Firebase
 
 protocol EntryTableViewCellDelegate {
-    
-    func presentImage(withURL url: URL)
+    func presentImage(withEntry: EntryViewModel)
     func updateFavorites()
 }
 
@@ -35,12 +34,9 @@ class EntryTableViewCell: UITableViewCell {
         super.layoutSubviews()
         self.configureViews()
     }
-    
     @IBAction func thumbnailButtonTapped(_ sender: AnyObject) {
-        
-        if let url = self.entry?.url {
-            
-            self.delegate?.presentImage(withURL: url)
+        if let entry = self.entry {
+            self.delegate?.presentImage(withEntry: entry)
         }
     }
     @IBAction func favoriteButtonTapped(_ sender: AnyObject) {

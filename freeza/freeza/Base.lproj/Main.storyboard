@@ -66,7 +66,7 @@
                                             </constraints>
                                             <state key="normal" image="thumbnail-placeholder"/>
                                             <connections>
-                                                <action selector="thumbnailButtonTapped:" destination="4pU-iB-mch" eventType="touchUpInside" id="iE1-Jm-YT5"/>
+                                                <action selector="thumbnailButtonTapped:" destination="4pU-iB-mch" eventType="touchUpInside" id="KuC-Vr-8e4"/>
                                             </connections>
                                         </button>
                                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NSFW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bh-YD-Bgo">
@@ -342,7 +342,7 @@
                                             </constraints>
                                             <state key="normal" image="thumbnail-placeholder"/>
                                             <connections>
-                                                <action selector="thumbnailButtonTapped:" destination="AXO-Rx-Wqp" eventType="touchUpInside" id="pba-1r-o6l"/>
+                                                <action selector="thumbnailButtonTapped:" destination="AXO-Rx-Wqp" eventType="touchUpInside" id="bwa-hL-1ga"/>
                                             </connections>
                                         </button>
                                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NSFW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOz-tB-47L">
@@ -461,8 +461,8 @@
     <resources>
         <image name="alert" width="34" height="34"/>
         <image name="gear" width="24" height="24"/>
-        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart" width="24" height="24"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart-full" width="24" height="24"/>
         <image name="star" width="24" height="24"/>
         <image name="thumbnail-placeholder" width="90" height="90"/>
