@@ -42,9 +42,10 @@ public class DBEntry: NSManagedObject {
         entryEntity.thumbnailURL = entry.thumbnailURL?.absoluteString
         do {
             try context.save()
-        } catch (let error) {
-            print(error)
-            return
+        } catch let error as NSError {
+            let nserror = error as NSError
+            print(nserror)
+            context.delete(entryEntity)
         }
     }
     
