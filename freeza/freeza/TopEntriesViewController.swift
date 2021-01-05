@@ -10,6 +10,11 @@ class TopEntriesViewController: UITableViewController {
     let tableFooterView = UIView()
     let moreButton = UIButton(type: .system)
     var entry: EntryViewModel?
+    var shouldUpdate: Bool = false {
+        didSet {
+            updateEntries()
+        }
+    }
     
     override func viewDidLoad() {
         
@@ -21,8 +26,7 @@ class TopEntriesViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
-        //TO DO: FIX THIS TO A OBSERVABLE ON SWITCH TOGGLE
+        tableView.reloadData() //this reload refreshes vc when toggle safe mode happens
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -72,7 +76,12 @@ class TopEntriesViewController: UITableViewController {
             self.entriesReloaded()
         }
     }
-    
+    func updateEntries() {
+        self.activityIndicatorView.startAnimating()
+        self.viewModel.updateFavorites {
+            self.entriesReloaded()
+        }
+    }
     private func configureViews() {
 
         func configureActivityIndicatorView() {
@@ -170,7 +179,7 @@ extension TopEntriesViewController: EntryTableViewCellDelegate {
         self.entry = withEntry
         self.performSegue(withIdentifier: TopEntriesViewController.showImageSegueIdentifier, sender: self)
     }
-    func updateFavorites() {
-        //no action
+    func updateFavorites(withEntry: EntryViewModel) {
+        tableView.reloadData()
     }
 }

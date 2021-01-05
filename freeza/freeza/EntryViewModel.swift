@@ -93,12 +93,14 @@ class EntryViewModel {
         let context = CoreDataStack.shared.persistentContainer.viewContext
         guard let model = self.model else { return }
         DBEntry.save(model, into: context)
+        self.isFavorite = true
     }
     
     func deleteEntryToDB(withCompletion completion: @escaping () -> ()) {
         let context = CoreDataStack.shared.persistentContainer.viewContext
         guard let model = self.model else { return }
         DBEntry.delete(model, from: context)
+        self.isFavorite = false
         DispatchQueue.main.async {
             completion()
         }

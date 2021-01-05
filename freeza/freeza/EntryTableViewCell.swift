@@ -4,7 +4,7 @@ import Firebase
 
 protocol EntryTableViewCellDelegate {
     func presentImage(withEntry: EntryViewModel)
-    func updateFavorites()
+    func updateFavorites(withEntry: EntryViewModel)
 }
 
 class EntryTableViewCell: UITableViewCell {
@@ -42,13 +42,12 @@ class EntryTableViewCell: UITableViewCell {
     @IBAction func favoriteButtonTapped(_ sender: AnyObject) {
         self.favoriteButton.isSelected = !self.favoriteButton.isSelected
         if self.favoriteButton.isSelected {
-            Analytics.logEvent("add_to_favorite", parameters:[:])
             entry?.saveEntryToDB()
         } else {
             entry?.deleteEntryToDB(){
-                self.delegate?.updateFavorites()
             }
         }
+        self.delegate?.updateFavorites(withEntry: entry!)
     }
     private func configureViews() {
         
