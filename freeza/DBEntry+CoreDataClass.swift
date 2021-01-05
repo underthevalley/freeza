@@ -40,6 +40,7 @@ public class DBEntry: NSManagedObject {
         entryEntity.commentsCount = Int32(count)
         entryEntity.url = entry.url?.absoluteString
         entryEntity.thumbnailURL = entry.thumbnailURL?.absoluteString
+        entryEntity.isAdult = entry.isAdult ?? false
         do {
             try context.save()
         } catch let error as NSError {
