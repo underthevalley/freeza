@@ -29,7 +29,6 @@ class FavoriteEntriesTableViewController: UITableViewController {
         self.loadEntries()
         self.tableView.reloadData()
     }
-
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
 
         coordinator.animate(alongsideTransition: { [weak self] (context) in
@@ -160,9 +159,15 @@ extension FavoriteEntriesTableViewController: EntryTableViewCellDelegate {
         self.entry = withEntry
         self.performSegue(withIdentifier: TopEntriesViewController.showImageSegueIdentifier, sender: self)
     }
-    func updateFavorites() {
+    func updateFavorites(withEntry: EntryViewModel) {
+        func updateDestination(){
+            if let nav = self.tabBarController?.viewControllers![0] as? UINavigationController {
+                if let destinationViewController = nav.viewControllers[0] as? TopEntriesViewController {
+                    destinationViewController.shouldUpdate = true
+                }
+            }
+        }
         self.loadEntries()
-        self.tableView.reloadData()
-        //TO DO: improve this to only delete each cell
+        updateDestination()
     }
 }

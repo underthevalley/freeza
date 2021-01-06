@@ -5,13 +5,14 @@ class TopEntriesViewModel {
     var hasError = false
     var errorMessage: String? = nil
     var entries = [EntryViewModel]()
-
+    var favoritesModel = FavoriteEntriesViewModel()
+    
     private let client: Client
     private var afterTag: String? = nil
 
     init(withClient client: Client) {
-        
         self.client = client
+        self.favoritesModel.loadEntriesFromDB {} //loads saved entries on construct
     }
     
     func loadEntries(withCompletion completionHandler: @escaping () -> ()) {
@@ -45,9 +46,9 @@ class TopEntriesViewModel {
                     
                     return entryViewModel
                 }
-            
+    
             strongSelf.entries.append(contentsOf: newEntries)
-            
+            strongSelf.flagFavorites()
                 strongSelf.hasError = false
                 strongSelf.errorMessage = nil
 
@@ -71,5 +72,24 @@ class TopEntriesViewModel {
                     completionHandler()
                 }
         })
+    }
+    private func flagFavorites()  {
+        //id like to refactor this to a cleaner map/filter High-order func
+        self.entries.forEach({ item in
+            if self.favoritesModel.entries.contains(where: { $0.url == item.url }) {
+                item.isFavorite = true
+            } else {
+                item.isFavorite = false
+            }
+        })
+    }
+    
+    func updateFavorites(withCompletion completionHandler: @escaping () -> ()) {
+        self.favoritesModel.loadEntriesFromDB {
+        self.flagFavorites()
+            DispatchQueue.main.async() {
+                completionHandler()
+            }
+        }
     }
 }

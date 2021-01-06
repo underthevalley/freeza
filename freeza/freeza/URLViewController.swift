@@ -22,13 +22,22 @@ class URLViewController: UIViewController {
             self.webView.loadRequest(URLRequest(url: url))
         }
     }
-    @objc func toggleFavorite(_ sender: AnyObject){
+    @objc func toggleFavorite(_ sender: AnyObject) {
+        func updateDestination(){
+            if let nav = self.tabBarController?.viewControllers![0] as? UINavigationController {
+                if let destinationViewController = nav.viewControllers[0] as? TopEntriesViewController {
+                    destinationViewController.shouldUpdate = true
+                }
+            }
+        }
         if isFavorite {
-            entryViewModel?.deleteEntryToDB(){}
+            entryViewModel?.deleteEntryToDB(){
+            }
         } else {
             entryViewModel?.saveEntryToDB()
         }
         isFavorite = !isFavorite
+        updateDestination()
         self.navigationItem.rightBarButtonItem = toggleBarButton()
     }
     func toggleBarButton() -> UIBarButtonItem {
